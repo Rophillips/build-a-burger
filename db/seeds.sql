@@ -1,0 +1,1 @@
+-- write INSERT queries to populate the burgers table with at least 3 entries
