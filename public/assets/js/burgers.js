@@ -2,7 +2,7 @@
 
 $(function() {
     // Adding burger to devour
-    $(".body-form").on("submit", function(event) {
+    $(".create-form").on("submit", function(event) {
 
         // Prevent default on submit
         event.preventDefault();
@@ -27,6 +27,27 @@ $(function() {
         )
     });
     // Add function to devour the burger - put
+    $(".delete").on("click", function(event) {
+
+        // Prevent default on submit
+        event.preventDefault();
+        console.log("click")
+
+       let id = $(this).attr("data-id")
+
+        // Sending POST request
+        $.ajax("/api/burgers" + id, {
+            type: "DELETE",
+            //data: addBurger
+
+        }).then(
+            function() {
+                console.log("delete burger");
+
+                location.reload();
+            }
+        )
+    });
 
 
 })

@@ -3,7 +3,7 @@
 <h2></h2>
 
 <h2></h2>
-<form class="body-form">
+<form class="create-form">
 
   <div class="form-group">
     <label for="ca">Burger name:</label>
@@ -11,6 +11,9 @@
   </div>
   <button type="submit">Add Burger</button>
 </form> 
+
+
+
 
 
 <h2>Burgers to devour</h2>
@@ -22,6 +25,7 @@
     <li>
         {{burger_name}}
         <button data-id={{id}}>Eat the burger</button> 
+        <button class= "delete" data-id={{id}}>Delete the burger</button> 
     </li>
 {{/unless}}
 {{/each}}
@@ -34,6 +38,8 @@
     <li>
         {{burger_name}}
         <button data-id={{id}}>I'M FULL!</button>
+        <button class= "delete" data-id={{id}}>Delete the burger</button> 
+
     </li>
 {{/if}}
 {{/each}}

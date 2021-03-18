@@ -23,6 +23,11 @@ var burger = {
     },
 
     //add delete?
+    deleteOne: function (condition, cb) {
+        orm.deleteOne("burgers", condition, function (res) {
+            cb(res);
+        })
+    }
 }
 
 
