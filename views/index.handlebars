@@ -3,11 +3,11 @@
 <h2></h2>
 
 <h2></h2>
-<form class="create-form">
+<form class="body-form">
 
   <div class="form-group">
     <label for="ca">Burger name:</label>
-    <input type="text" id="newBurger" name="name">
+    <input type="text" id="addBurger" name="name">
   </div>
   <button type="submit">Add Burger</button>
 </form> 
@@ -33,7 +33,7 @@
     {{#if devoured}}
     <li>
         {{burger_name}}
-        <button data-id={{id}}>Eat the burger</button>
+        <button data-id={{id}}>I'M FULL!</button>
     </li>
 {{/if}}
 {{/each}}
