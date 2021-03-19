@@ -76,7 +76,7 @@ var orm = {
   // Function to update table entry
   // updateOne()
   updateOne: function (table, objColVals, condition, cb) {
-        var queryString = "UPDATE " + table;
+        var queryString = " UPDATE " + table;
 
         queryString += " SET ";
         queryString += objToSql(objColVals);
@@ -95,11 +95,11 @@ var orm = {
   deleteOne: function (table, condition, cb) {
       var queryString = "DELETE FROM " + table;
 
-      queryString += "WHERE ";
+      queryString += " WHERE ";
       queryString += condition;
 
       console.log(queryString);
-      connection.query(queryString, function (err, result) {
+      connection.query(queryString,[table, condition], function (err, result) {
           if (err) {
               throw err;
           }
