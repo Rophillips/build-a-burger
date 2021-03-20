@@ -1,16 +1,16 @@
 // set up code to connect Node to Mysql
 var mysql = require("mysql");
 
-//var connection = mysql.createConnection(process.env.JAWSDB_URL);
+var connection = mysql.createConnection(process.env.JAWSDB_URL);
 
-console.log(process.env.DB_NAME)
-var connection = mysql.createConnection({
-    host: process.env.DB_HOST,
-    port: 3306,
-    user: process.env.DB_USER,
-    password: process.env.PASSWORD,
-    database: process.env.DB_NAME,
-});
+// console.log(process.env.DB_NAME)
+// var connection = mysql.createConnection({
+//     host: process.env.DB_HOST,
+//     port: 3306,
+//     user: process.env.DB_USER,
+//     password: process.env.PASSWORD,
+//     database: process.env.DB_NAME,
+// });
 
 //  make the connection
 connection.connect(function(err) {
