@@ -7,9 +7,9 @@ console.log(process.env.DB_NAME)
 var connection = mysql.createConnection({
     host: process.env.DB_HOST,
     port: 3306,
-    user: process.env.DB_HOST,
-    password: process.env.DB_HOST,
-    database: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.PASSWORD,
+    database: process.env.DB_NAME,
 });
 
 //  make the connection
