@@ -6,3 +6,7 @@ ol li{
     list-style:none!important;
     }
 
+img {
+    width: 500px;
+    height: 500px;
+}
